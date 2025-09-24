@@ -32,9 +32,10 @@ class HttpQuery {
       }
     }
     try {
+      Uri uri = prefs.getBool('https') ?? false ? Uri.https(prefs.string("serveraddress"), route) : Uri.http(prefs.string("serveraddress"), route);
       var response = await http
           .post(
-              Uri.http(prefs.string("serveraddress"), route),
+              uri,
               headers: {
                 'Content-Type': 'application/json',
               },

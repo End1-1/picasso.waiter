@@ -1,6 +1,7 @@
 import 'package:picassowaiter/bloc/app_bloc.dart';
 import 'package:picassowaiter/bloc/app_cubits.dart';
 import 'package:picassowaiter/bloc/question_bloc.dart';
+import 'package:picassowaiter/l10n/app_localizations.dart';
 import 'package:picassowaiter/model/model.dart';
 import 'package:picassowaiter/model/navigation.dart';
 import 'package:picassowaiter/screen/menu.dart';
@@ -8,7 +9,6 @@ import 'package:picassowaiter/utils/prefs.dart';
 import 'package:picassowaiter/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 abstract class WMApp extends StatelessWidget {
   late final Navigation nav;

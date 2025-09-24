@@ -2,7 +2,7 @@ name: picassowaiter
 description: ""
 publish_to: 'none'
 
-version: 1.0.3+38
+version: 1.0.3+43
 
 environment:
   sdk: ^3.5.3
@@ -15,17 +15,17 @@ dependencies:
   flutter_launcher_icons: ^0.14.1
   shared_preferences: ^2.5.3
   package_info_plus: ^8.0.2
-  intl: ^0.19.0
-
+  intl: any
   http: ^1.1.2
   flutter_bloc: ^8.1.5
   equatable: ^2.0.5
-  mobile_scanner: ^6.0.1
   image_picker: ^1.1.2
   flutter_slidable: ^3.1.0
   url_launcher: ^6.3.0
   flutter_localizations:
     sdk: flutter
+  google_mlkit_barcode_scanning: ^0.14.1
+
 
 dev_dependencies:
   flutter_test:

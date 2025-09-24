@@ -29,7 +29,10 @@ class DashboardModel {
   }
 
   void changeDate1() {
-    Calendar.show(firstDate: date1.add(const Duration(days: -365 * 3)), currentDate: date1).then((value) {
+    Calendar.show(
+            firstDate: date1.add(const Duration(days: -365 * 3)),
+            currentDate: date1)
+        .then((value) {
       if (value != null) {
         date1 = value;
         state();
@@ -38,7 +41,10 @@ class DashboardModel {
   }
 
   void changeDate2() {
-    Calendar.show(firstDate: date1.add(const Duration(days: -365 * 3)), currentDate: date2).then((value) {
+    Calendar.show(
+            firstDate: date1.add(const Duration(days: -365 * 3)),
+            currentDate: date2)
+        .then((value) {
       if (value != null) {
         date2 = value;
         state();
@@ -53,24 +59,22 @@ class AppStateDashboard extends AppStateFinished {
 
 extension WMEDashboard on WMDashboard {
   void getDashboard() {
-
-        getDashboardWaiter();
-
+    getDashboardWaiter();
   }
-
-
 
   void openDraft(String id) {
     Navigator.push(
-        prefs.context(),
-        MaterialPageRoute(
-            builder: (builder) => WMDraftSale(model: model, draftid: id))).then((value) {
-              getDashboard();
+            prefs.context(),
+            MaterialPageRoute(
+                builder: (builder) => WMDraftSale(model: model, draftid: id)))
+        .then((value) {
+      getDashboard();
     });
   }
 
   void removeDraft(String id) {
-      BlocProvider.of<QuestionBloc>(prefs.context()).add (QuestionEventRaise( model.tr('Confirm to remove draft'), () {
+    BlocProvider.of<QuestionBloc>(prefs.context())
+        .add(QuestionEventRaise(model.tr('Confirm to remove draft'), () {
       BlocProvider.of<AppBloc>(prefs.context()).add(AppEventLoading(
           model.tr('Wait, please'), 'engine/shop/remove-draft.php', {'id': id},
           (e, d) {

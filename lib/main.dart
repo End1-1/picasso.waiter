@@ -8,10 +8,10 @@ import 'package:picassowaiter/screen/login.dart';
 import 'package:picassowaiter/utils/prefs.dart';
 import 'package:picassowaiter/utils/styles.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'bloc/date_bloc.dart' show DateBloc;
+import 'l10n/app_localizations.dart';
 import 'model/model.dart';
 import 'model/navigation.dart';
 

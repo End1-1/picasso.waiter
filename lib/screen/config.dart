@@ -31,6 +31,8 @@ class WMConfig extends WMApp {
                 model.tr('Server password')))
       ]),
       Styling.columnSpacingWidget(),
+      Row(children: [Expanded(child:  _HttpRadioGroup())]),
+      Styling.columnSpacingWidget(),
       Row(
         crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
@@ -48,5 +50,47 @@ class WMConfig extends WMApp {
           ]
       ),
     ]));
+  }
+}
+
+class _HttpRadioGroup extends StatefulWidget {
+
+
+  const _HttpRadioGroup({
+    super.key
+  });
+
+  @override
+  State<_HttpRadioGroup> createState() => __HttpRadioGroupState();
+}
+
+class __HttpRadioGroupState extends State<_HttpRadioGroup> {
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+    Expanded(
+    child:  RadioListTile<bool>(
+          title: const Text('http'),
+          value: false,
+          groupValue: prefs.getBool('https') ?? false,
+          onChanged: (value) {
+            setState(()  {});
+            prefs.setBool('https', false);
+          },
+        )),
+    Expanded(
+    child:  RadioListTile<bool>(
+          title: const Text('https'),
+          value: true,
+          groupValue: prefs.getBool('https') ?? false,
+          onChanged: (value) {
+            setState(() {});
+            prefs.setBool('https', true);
+          },
+        )),
+      ],
+    );
   }
 }

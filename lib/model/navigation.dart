@@ -1,12 +1,12 @@
 import 'package:picassowaiter/bloc/app_bloc.dart';
 import 'package:picassowaiter/bloc/question_bloc.dart';
 import 'package:picassowaiter/main.dart';
-import 'package:picassowaiter/mobiles_scanner/barcode_reader.dart';
 import 'package:picassowaiter/model/model.dart';
 import 'package:picassowaiter/screen/config.dart';
 import 'package:picassowaiter/screen/draft_sale.dart';
 import 'package:picassowaiter/screen/goods_info.dart';
 import 'package:picassowaiter/screen/order.dart';
+import 'package:picassowaiter/utils/barcode.dart';
 import 'package:picassowaiter/utils/prefs.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
