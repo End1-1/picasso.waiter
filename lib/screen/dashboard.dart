@@ -8,7 +8,6 @@ import 'package:picassowaiter/utils/prefs.dart';
 import 'package:picassowaiter/utils/styles.dart';
 
 import 'app.dart';
-import 'draft_sale.dart';
 
 part 'dashboard.model.dart';
 part 'dashboard.waiter.dart';

@@ -62,15 +62,7 @@ extension WMEDashboard on WMDashboard {
     getDashboardWaiter();
   }
 
-  void openDraft(String id) {
-    Navigator.push(
-            prefs.context(),
-            MaterialPageRoute(
-                builder: (builder) => WMDraftSale(model: model, draftid: id)))
-        .then((value) {
-      getDashboard();
-    });
-  }
+
 
   void removeDraft(String id) {
     BlocProvider.of<QuestionBloc>(prefs.context())

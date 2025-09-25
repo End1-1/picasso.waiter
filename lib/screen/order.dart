@@ -6,7 +6,6 @@ import 'package:intl/intl.dart';
 import 'package:picassowaiter/bloc/app_bloc.dart';
 import 'package:picassowaiter/model/model.dart';
 import 'package:picassowaiter/screen/app.dart';
-import 'package:picassowaiter/utils/barcode.dart' ;
 import 'package:picassowaiter/utils/http_query.dart';
 import 'package:picassowaiter/utils/prefs.dart';
 import 'package:picassowaiter/utils/styles.dart';

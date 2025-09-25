@@ -20,6 +20,7 @@ void main() async {
   prefs = await SharedPreferences.getInstance();
   PackageInfo pa = await PackageInfo.fromPlatform();
   prefs.setString('appversion', '${pa.version}.${pa.buildNumber}');
+  prefs.setString('appbuild', '${pa.buildNumber}');
   print('APPVERSION ${prefs.getString('appversion')}');
   prefs.init();
   runApp(MultiBlocProvider(providers: [
